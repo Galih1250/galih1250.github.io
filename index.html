@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
+  <title>Bagja Galih Wiguna – Portfolio</title>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    /* Custom scroll bar styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -18,278 +22,135 @@
     ::-webkit-scrollbar-track {
       background-color: #e0e7ff;
     }
-
-        body {
-            font-family: 'Comic Sans MS', sans-serif;
-        }
   </style>
- <audio id="audio1" src="audio/momoi.mp3"></audio>
- <audio id="audio2" src="audio/wi.mp3"></audio>
- <audio id="audio3" src="audio/wo.mp3"></audio>
- <audio id="audio4" src="audio/gs.mp3"></audio>
 </head>
 
-<body class="bg-gray-900 text-gray-900">
-  <header class="bg-blue-300 fixed top-0 left-0 w-full shadow-md z-30">
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white fixed top-0 left-0 w-full shadow z-30">
     <div class="container mx-auto flex items-center justify-between p-4 md:p-6">
-      <a href="#hero" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition" onmouseover="play('audio2');" onmouseout="stop('audio2');" >Galih</a>
-      <nav class="space-x-6 text-black font-medium hidden md:flex">
+      <a href="#hero" class="text-2xl font-bold text-indigo-600">Bagja</a>
+      <nav class="space-x-6 font-medium hidden md:flex">
         <a href="#about" class="hover:text-indigo-600 transition">About</a>
         <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
         <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
       </nav>
       <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
+        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
       </button>
     </div>
+
     <nav id="mobile-menu" class="bg-white hidden md:hidden px-4 pb-4 border-t border-gray-200">
-      <a href="#about" class="block py-2 text-gray-700 font-medium hover:text-indigo-600 transition">About</a>
-      <a href="#projects" class="block py-2 text-gray-700 font-medium hover:text-indigo-600 transition">Projects</a>
-      <a href="#contact" class="block py-2 text-gray-700 font-medium hover:text-indigo-600 transition">Contact</a>
+      <a href="#about" class="block py-2 hover:text-indigo-600">About</a>
+      <a href="#projects" class="block py-2 hover:text-indigo-600">Projects</a>
+      <a href="#contact" class="block py-2 hover:text-indigo-600">Contact</a>
     </nav>
   </header>
 
-
-    <!-- Hero -->
-   <section id="hero" class="min-h-[70vh] flex flex-col md:flex-row items-center justify-center md:justify-between space-y-10 md:space-y-0 md:space-x-12 relative overflow-hidden">
-  <div class="max-w-xl text-center md:text-left">
-  <main class="pt-24 container mx-auto px-6 md:px-12">
-
-    <h1 class="text-5xl font-extrabold text-indigo-700 mb-4 animate-bounce">
-      Hi, I’m Bagja Galih Wiguna
-    </h1>
-    <p class="text-lg text-gray-50 mb-6 animate-bounce">
-      A silly dev creating silly and goofy web experiences. I love
-      <del>scrolling facebook</del> code useless websites and making interesting problems.
-    </p>
-    
-    <p id="devThought" class="text-sm italic mt-2 text-indigo-300"></p>
-    <!-- This space intentionally left for normal link fallback if needed -->
-  </div>
-
-  <!-- The trolling link is placed here, absolutely positioned within #hero -->
-  <a href="#projects" id="trollLink" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-indigo-700 transition-all animate-bounce" style="position: absolute; top: 70%; left: -5%; transform: translate(-50%, -50%)"> View Shit I Create
-  </a>
-  </div>
-  <div> 
-    <div>
-    <img src="img/hero.png" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-indigo-600 mx-auto md:mx-0 animate-spin" onmouseover="play('audio1');" onmouseout="stop('audio1');" />
-   
-</div>
-  </div>
-</section>
-
-<!--  Languages -->
-<section class="mt-10 text-center animate-pulse ">
-  <h2 class="text-3xl font-bold text-amber-600 mb-4">Languages I Use</h2>
-  <div class="grid grid-cols-4 gap-4 justify-center max-w-2xl mx-auto">
-    <div class="flex items-center space-x-2 ">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/768px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">JavaScript</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png" alt="HTML" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">HTML</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/768px-Tailwind_CSS_Logo.svg.png?20230715030042" alt="Tailwind" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">TailwindCSS</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1067px-PHP-logo.svg.png" alt="PHP" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">PHP</span>
-    </div>
-    <div class="flex items-center space-x-2" onmouseover="play('audio3');" onmouseout="stop('audio3');">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="Indonesia" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">Bahasa</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1920px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="english" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">English</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1536px-Flag_of_Japan.svg.png" alt="Japanese" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">Japanese</span>
-    </div>
-  </div>
-</section>
-
-<!--  Frameworks -->
-<section class="mt-10 text-center animate-pulse">
-  <h2 class="text-3xl font-bold text-blue-600 mb-4">Framework I Use</h2>
-  <div class="flex flex-wrap justify-center space-x-4">
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1969px-Laravel.svg.png" alt="Laravel" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">Laravel</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">Vue</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" alt="Code Igniter" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">Code Igniter</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/885px-Node.js_logo.svg.png" alt="Node" class="w-8 h-8" />
-      <span class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg">Node.js</span>
-    </div>
-  </div>
-</section>
-
-
-    <!-- About -->
-    <section id="about" class="mt-24 max-w-4xl mx-auto text-center animate-bounce">
-      <h2 class="text-4xl font-bold text-red-600 mb-8">About Me</h2>
-      <p class="text-gray-50 text-lg leading-relaxed">
-        I am a <del>vibe</del> silly developer with a strong focus on creating silly website, yet funny, and visually goofy websites. I have worked on projects ranging from personal silly projects to college assignment such as this portfolio site. With a passion for learning new shit with sore eye, I strive to bring ideas to life through clean, maintainable code yet silly and modern technology stacks.
+  <!-- Hero -->
+  <section id="hero" class="min-h-[90vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-12 mt-16">
+    <div class="max-w-xl text-center md:text-left">
+      <h1 class="text-5xl font-extrabold text-indigo-700 mb-4">Hi, I’m Bagja Galih Wiguna</h1>
+      <p class="text-lg text-gray-600 mb-6">
+        I’m an Informatics Engineering student passionate about web development and UI/UX design.
+        I enjoy building clean, functional, and user-friendly digital experiences.
       </p>
-    </section>
+      <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-indigo-700 transition">
+        View My Projects
+      </a>
+    </div>
+    <div class="mt-10 md:mt-0">
+      <img src="img/hero.png" alt="Profile Picture"
+        class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-indigo-600 mx-auto md:mx-0" />
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mt-24 max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-yellow-600 mb-12 text-center">My Shit</h2>
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="bg-yellow-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow blur-md hover:blur-none">
-          <h3 class="text-xl font-semibold mb-2">Project One : A Lazy Portfolio For College Assignment</h3>
-          <p class="text-gray-700 mb-4">An unresponsive web app built with HTML and vanilla CSS, too lazy to complete it.</p>
-          <a href="https://ifstmikjabar.id/Bagja" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Project</a>
-        </div>
-        <div class="bg-yellow-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow blur-md hover:blur-none">
-          <h3 class="text-xl font-semibold mb-2">Project Two : A Silly Music Player Using Laravel And Vue.js</h3>
-          <p class="text-gray-700 mb-4">A plain music player with no css or styles whatsoever, i mean its functional duh</p>
-          <a href="" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Project</a>
-        </div>
-        <div class="bg-yellow-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow blur-md hover:blur-none">
-          <h3 class="text-xl font-semibold mb-2">Project Three : Another Lazy Portfolio But With Extra Effort </h3>
-          <p class="text-gray-700 mb-4">I mean you currently looking at it.</p>
-          <a href="#" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Project</a>
-        </div>
+  <!-- About -->
+  <section id="about" class="mt-24 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-indigo-600 mb-8">About Me</h2>
+    <p class="text-gray-600 text-lg leading-relaxed">
+      I’m currently studying Informatics Engineering at Universitas Al-Ghifari. 
+      My interests lie in front-end development, UI/UX design, and creative digital projects.
+      I believe in combining functionality with simplicity to create experiences that users enjoy.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="mt-24 text-center">
+    <h2 class="text-3xl font-bold text-indigo-600 mb-6">Skills & Tools</h2>
+    <div class="flex flex-wrap justify-center gap-4 text-gray-700">
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">HTML</span>
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">CSS / TailwindCSS</span>
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">JavaScript</span>
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">PHP / Laravel</span>
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">Vue.js</span>
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">CodeIgniter</span>
+      <span class="bg-indigo-100 px-4 py-2 rounded-lg">Figma</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="mt-24 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-indigo-600 mb-12 text-center">Featured Projects</h2>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+        <p class="text-gray-600 mb-4">Personal portfolio website showcasing projects and skills, built with Tailwind CSS and HTML.</p>
+        <a href="#" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Project</a>
       </div>
-    </section>
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-semibold mb-2">Music Player Web App</h3>
+        <p class="text-gray-600 mb-4">A simple web music player using Laravel and Vue.js with playlist features.</p>
+        <a href="#" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Project</a>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-semibold mb-2">UI/UX Design – Mobile Player</h3>
+        <p class="text-gray-600 mb-4">Figma prototype for a modern and minimal music player app interface.</p>
+        <a href="#" target="_blank" class="text-indigo-600 hover:underline font-semibold">View Project</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mt-24 max-w-3xl mx-auto text-center">
-  <h2 class="text-4xl font-bold text-emerald-600 mb-8">Dont Contact Me</h2>
-  <p class="text-gray-50 mb-6">Please dont reach out for collaborations, freelance projects, but please (try) say hello... Im lonely af</p>
-  <form class="bg-emerald-300 p-8 rounded-lg shadow-lg max-w-lg mx-auto relative hover:opacity-0"> <!-- relative here -->
-    <div class="mb-4 text-left">
-      <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-      <input type="text" id="name" required placeholder="Your name" class="w-full px-4 py-3 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" />
-    </div>
-    <div class="mb-4 text-left">
-      <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-      <input type="email" id="email" required placeholder="you@example.com" class="w-full px-4 py-3 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" />
-    </div>
-    <div class="mb-6 text-left">
-      <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-      <textarea id="message" rows="4" required placeholder="Your message" class="w-full px-4 py-3 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
-    </div>
-    <button type="submit" id="trollButton" class="bg-green-800 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-indigo-700 transition-all" style="position: absolute; top: 93%; left: 50%; transform: translate(-50%, -50%);"> Send Message </button>
-  </form>
-</section>
-  </main>
+  <!-- Contact -->
+  <section id="contact" class="mt-24 max-w-3xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-indigo-600 mb-8">Contact Me</h2>
+    <p class="text-gray-600 mb-6">I’m open to collaboration, freelance work, or just a friendly chat. Let’s connect!</p>
+    <form class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+      <div class="mb-4 text-left">
+        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+        <input type="text" id="name" required placeholder="Your name"
+          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+      </div>
+      <div class="mb-4 text-left">
+        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+        <input type="email" id="email" required placeholder="you@example.com"
+          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+      </div>
+      <div class="mb-6 text-left">
+        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+        <textarea id="message" rows="4" required placeholder="Your message"
+          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+      </div>
+      <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-indigo-700 transition-all">
+        Send Message
+      </button>
+    </form>
+  </section>
 
-  <footer class="mt-24 py-8 bg-yellow-200 text-center text-gray-500 text-sm " onmouseover="play('audio4');" onmouseout="stop('audio4');">
-    &copy; 2025 Bagja Galih Wiguna. Please Feel Free To Copy This Shit
+  <!-- Footer -->
+  <footer class="mt-24 py-8 bg-gray-100 text-center text-gray-500 text-sm">
+    &copy; 2025 Bagja Galih Wiguna. All rights reserved.
   </footer>
 
   <script>
-    // Mobile 
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    },
-
-    // Audio
-     // Define global functions immediately so inline HTML can use them
-     window.addEventListener('click', () => {
-  play('audio');
-}, { once: true }),
-
-   window.play = function(id) {
-    const audio = document.getElementById(id);
-    if (audio) {
-      audio.play().catch(err => {
-        console.warn("Audio play failed (autoplay policy?):", err);
-      });
-    }
-  },
-
- window.stop = function(id) {
-  const audio = document.getElementById(id);
-  if (audio) {
-    audio.pause();
-    audio.currentTime = 0;
-  }
-},
-
-  // Wait for DOM to be ready before attaching event listeners
-  document.addEventListener('DOMContentLoaded', function () {
-    // link movement
-    const link = document.getElementById("trollLink");
-    if (link) {
-      link.addEventListener("mouseenter", (e) => {
-        const parent = link.parentElement;
-        const parentWidth = parent.clientWidth;
-        const parentHeight = parent.clientHeight;
-        const linkWidth = link.offsetWidth;
-        const linkHeight = link.offsetHeight;
-
-        const maxX = parentWidth - linkWidth;
-        const maxY = parentHeight - linkHeight;
-
-        const randomX = Math.random() * maxX;
-        const randomY = Math.random() * maxY;
-
-        link.style.left = `${randomX}px`;
-        link.style.top = `${randomY}px`;
-        link.style.transform = "translate(0, 0)";
-        e.preventDefault();
-      })
-
-      link.addEventListener("contextmenu", (e) => e.preventDefault());
-    }
-  }))
-
-   const button = document.getElementById("trollButton");
-  if (button) {
-    button.addEventListener("mouseenter", () => {
-      const parent = button.parentElement;
-      const parentWidth = parent.clientWidth;
-      const parentHeight = parent.clientHeight;
-      const buttonWidth = button.offsetWidth;
-      const buttonHeight = button.offsetHeight;
-
-      // Calculate max allowed left and top so button stays fully inside parent
-      const maxX = parentWidth - buttonWidth;
-      const maxY = parentHeight - buttonHeight;
-
-      // Random position inside parent
-      const randomX = Math.random() * maxX;
-      const randomY = Math.random() * maxY;
-
-      button.style.left = `${randomX}px`;
-      button.style.top = `${randomY}px`;
-      button.style.transform = "translate(0, 0)";
-    });
-  }
-
-  const thoughts = [
-    "Why write clean code when you can write code that only *you* understand?",
-    "Commit messages are for cowards.",
-    "If it works, don't touch it. If it doesn't, blame the keyboard.",
-    "code is like humor. When you have to explain it, it's bad.",
-    "I spent too much time writing code that didn't work.",
-    "Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.",
-    "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-    "Skill Issue",
-    "What a waste of time",
-    "Why are you here?",
-  ];
-  document.getElementById("devThought").textContent = thoughts[Math.floor(Math.random() * thoughts.length)];
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
   </script>
 </body>
 </html>
-
